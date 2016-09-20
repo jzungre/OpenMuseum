@@ -49,6 +49,7 @@ class PostNew extends Component {
           <input type="text" placeholder="Title of Artwork" value={this.state.title} onChange={this.onArtChange}/>
             <br></br>
         	<textarea type="text" placeholder="Description" value={this.state.description} onChange={this.onDescriptionChange}/>
+        	<br></br>
         	<input type="submit"/>
         </form>
       </main>
