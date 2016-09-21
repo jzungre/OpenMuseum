@@ -72,7 +72,7 @@ class PostNew extends Component {
         	<textarea type="text" placeholder="Description" value={this.state.description} onChange={this.onDescriptionChange}/>
         	<br></br> 
         	 <Dropzone value={this.state.files} onDrop={this.onDrop}>
-              <div>Try dropping some files here, or click to select files to upload.</div>
+              <div>Drop files or click here to add images</div>
             </Dropzone>
             <input type="submit"/>
             <br></br>
