@@ -11,7 +11,8 @@ var artSchema = new mongoose.Schema({
     data: Buffer, 
     contentType: String 
   },
-  user: String
+  user: String,
+  likes: Number
 });
 
 artSchema.methods.setLocation = function(locObj){
