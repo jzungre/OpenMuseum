@@ -36,7 +36,6 @@ export default class PostLists extends Component {
       );
     } else {
       console.log("nothing around you");
-      this.props.fetchPosts(this.props.location); // double check when you refresh
       return (<div> Nothing around you. </div>);
     }
   }

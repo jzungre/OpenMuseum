@@ -14,7 +14,7 @@ class PostNew extends Component {
       title: '',
       description: '',
       files: [],
-      image: ''
+      likes: 0
 
     };
 

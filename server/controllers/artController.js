@@ -49,6 +49,7 @@ module.exports.insertArt = function(req, res) {
     art.description = req.body.description;
     art.categories = req.body.categories;
     art.image = req.body.image;
+    art.likes = req.body.likes;
     // art.user = req.body.user; //probably find from querying db on token
 
     art.setLocation(req.body.location);
@@ -89,7 +90,7 @@ module.exports.findArt = function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      // console.log('findArt Data',data);
+      console.log('findArt Data======================>',data);
      
       const range = 0.006;
       let lngMin = req.body.longitude - range;
@@ -121,6 +122,7 @@ module.exports.findArt = function(req, res) {
       }
       result.sort(compareDistance);
       // end of sort by distance from me
+      console.log('findArt Result======================>',result);
 
   
       res.status(200).send(result);
