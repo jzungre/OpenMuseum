@@ -6,6 +6,7 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import store from '../store';
 import * as actions from '../actions/actionCreators';
+import { browserHistory } from 'react-router';
 
 class renderDropzoneInput extends Component{
   constructor(props) {
@@ -87,7 +88,11 @@ class PostNew extends Component{
     };
   }
   onSubmit(props) {
+    event.preventDefault();
     this.props.createPost3(props);
+    console.log('after createPost3')
+    browserHistory.push('/')
+    console.log('afterpush')
   }
 
   componentDidUpdate() {
